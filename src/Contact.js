@@ -1,26 +1,30 @@
-import React from 'react';
-import { Form, Col } from 'react-bootstrap';
-import { Button } from 'react-bootstrap/'
+import React, { Component } from 'react';
+import './styles/styles.scss'
 
-const Contact = () => (
-  <Form>
-    <Form.Group controlId="formBasicEmail">
-      <Form.Label>Email address</Form.Label>
-      <Form.Control type="email" placeholder="Enter email" />
-      <Form.Text className="text-muted">
-        We'll never share your email with anyone else.
-    </Form.Text>
-      <Col>
-        <Form.Control placeholder="First name" />
-      </Col>
-      <Col>
-        <Form.Control placeholder="Last name" />
-      </Col>
-    </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
-</Form>
-)
-
-export default Contact
+export default class ContactForm extends Component {
+  render() {
+    return(
+      <form className="contact-form" onSubmit={this.onFormSubmit}>
+        <div className="contat-label">
+          <label htmlFor="email">Email:</label>
+          <div>
+            <input type="email" placeholder="e.g. johnsmith@gmail.com"  />
+          </div>
+        </div>
+        <div className="contact-label">
+          <label htmlFor="title">Title:</label>
+          <div>
+            <input type="text"  />
+          </div>
+        </div>
+        <div className="contact-label">
+          <label for="message">Message:</label>
+          <div>
+            <textarea  />
+          </div>
+        </div>
+        <button type="submit" className="btn-primary">Submit</button>
+      </form>
+    )
+  }
+}

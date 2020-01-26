@@ -1,40 +1,33 @@
-import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import styled from 'styled-components';
+import React, { Component } from 'react';
+import '../styles/styles.scss'
 
-const Styles = styled.div`
-  .navbar {
-    background-color: #222;
+export default class Navigationbar extends Component {
+  render() {
+    return(
+    <html>
+    <body>
+      <div class="menu-container">
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger">
+          <div></div>
+        </div>
+        <div class="menu">
+          <div>
+            <div>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href ="/photography">Photography</a></li>
+                <li><a href ="/contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </body>
+    </html>
+  )
   }
-
-  .navbar-brand, .navbar-nav .nav-link {
-    color: white;
-
-    &:hover {
-      color: white;
-    }
-  }
-
-  button {
-    color: white;
-  }
-
-`;
-
-export const NavigationBar = () => (
-  <Styles>
-    <Navbar sticky="" expand="lg" variant="dark">
-    <Navbar.Brand href="/">Nick Fletcher</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="ml-auto">
-        <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
-        <Nav.Item><Nav.Link href="/projects">Projects</Nav.Link></Nav.Item>
-        <Nav.Item><Nav.Link href="/photography">Photography</Nav.Link></Nav.Item>
-        <Nav.Item><Nav.Link href="/about">About</Nav.Link></Nav.Item>
-        <Nav.Item><Nav.Link href="/contact">Contact</Nav.Link></Nav.Item>
-      </Nav>
-    </Navbar.Collapse>
-    </Navbar>
-  </Styles>
-)
+}

@@ -6,7 +6,7 @@ import { About } from './About';
 import Contact from "./Contact";
 import Photography from "./Photography";
 import { NoMatch } from './NoMatch';
-import { NavigationBar } from './components/NavigationBar';
+import NavigationBar from './components/NavigationBar';
 import { Jumbotron } from './components/Jumbotron';
 import { Footer } from './components/Footer';
 
