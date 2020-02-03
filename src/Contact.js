@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles/styles.scss'
 
-export default class ContactForm extends Component {
+class Contact extends Component {
   render() {
     return(
       <form className="contact-form" onSubmit={this.onFormSubmit}>
@@ -28,3 +28,5 @@ export default class ContactForm extends Component {
     )
   }
 }
+
+export default Contact;

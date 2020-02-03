@@ -1,51 +1,33 @@
-import React from 'react';
-import { Image } from 'react-bootstrap'
-import { Container, Row, Col } from 'react-bootstrap';
-import pizzaApp from './assets/pizzaApp.jpg';
-import railsApp from './assets/railsApp.jpg';
-import terminalApp from './assets/terminalApp.jpg';
-import { Button } from 'react-bootstrap/'
-import styled from 'styled-components';
+import React, { Component } from 'react';
+import './styles/styles.scss'
 
-const Styles = styled.div `
-  .btn-primary {
-    color: white;
-    background-color: black;
-    border-color: red;
-    font-size: 12px;
-`
+class Home extends Component {
+  render() {
+    return(
+      <body>
+        <div className="container">
+          <div className="content">
+            <h1>Welcome</h1>
+            <p>My name is Nick and this is my portfolio</p>
+            <a href="/projects">
+              <button className="btn">Go to my Projects</button>
+            </a>
+            <a href="/photography">
+              <button className="btn">Go to my photos</button>
+            </a>
+            <div className="social">
+            <button className="social">
+              <a target="_blank" href="https://github.com/nickf94"><i class="fab fa-github" /></a>
+            </button>
+            <button className="social">
+              <a target="_blank" href="https://www.instagram.com/nick_f94/"><i class="fab fa-instagram" /></a>
+            </button>
+            </div>
+          </div>
+        </div>
+      </body>
+    )
+  }
+}
 
-export const Home = () => (
-<React.Fragment>
-  <Styles>
-    <Container>
-      <Row>
-        <Col xs={6} md={4}>
-          <div>
-          <Button target="_blank" href="https://github.com/nickf94/PizzaApp">
-            <h5>Pizza Order App with Swift</h5>
-            </Button>
-            <Image src={pizzaApp}  fluid rounded />
-          </div>
-        </Col>
-        <Col xs={6} md={4}>
-          <div>
-          <Button target="_blank" href="https://github.com/nickf94/Rails-Marketplace-App">
-            <h5>Marketplace Application with Rails</h5>
-            </Button>
-            <Image src={railsApp} fluid rounded />
-          </div>
-        </Col>
-        <Col xs={6} md={4}>
-          <div>
-          <Button target="_blank" href="https://github.com/nickf94/Question-and-Answers">
-            <h5>Terminal Application using Ruby</h5>
-            </Button>
-            <Image src={terminalApp} fluid rounded />
-          </div>
-        </Col>
-      </Row>
-    </Container>
-  </Styles>
-</React.Fragment>
-)
+export default Home;

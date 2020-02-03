@@ -1,5 +1,75 @@
 @import
-url('https://fonts.googleapis.com/css?family=Amarante');
+url('https://fonts.googleapis.com/css?family=Amarante'),
+url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Amatic SC', cursive;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+  width: 700px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.content h1 {
+  font-size: 4.3rem;
+  margin-bottom: 0.8rem;
+  color: #fff44f;
+  font-family: 'Amarante', cursive;
+}
+
+.content p {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  margin-top: .8rem;
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: #fff44f;
+  background-color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: .3s;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
 
 .button {
   padding: 0.75rem 1.25rem;
@@ -146,7 +216,7 @@ url('https://fonts.googleapis.com/css?family=Amarante');
   text-decoration: none;
   margin: .5rem;
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 550;
   text-transform:uppercase;
   color: #fff;
@@ -161,26 +231,120 @@ url('https://fonts.googleapis.com/css?family=Amarante');
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 450px;
+  height: 100vh;
   align-items: center;
-  background: grey;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 2.4rem;
 }
 
 .contact-label {
   display: block;
+  justify-content: center;
+  align-items: center;
   position: relative;
   margin: 1rem;
 }
-.header {
-  display: absolute;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
+
+@keyframes slideshow {
+  0% {width: 100%; left: 100%}
+  5% {left: 0}
+  25% {left: 0}
+  50% {width: 100%; left: -100%}
+  75% {width: 0; left: -100%}
+  100% {width: 0; left: 100%}
 }
 
-.about-container {
-  display: inline-block;
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  overflow: hidden;
+  animation: slideshow 14s infinite;
+  background-position: center;
+  background-size: cover;
+  background-color: #000;
+  color: #fff;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide:nth-child(1) {
+  left: 0%;
+  animation-delay: 11s;
+  background-image: url(../assets/Fireworks.jpg);
+}
+
+.slide:nth-child(2) {
+  left: 0%;
+  animation-delay: 8s;
+  background-image: url(../assets/JetPlaneClose.jpg);
+}
+
+.slide:nth-child(3) {
+  left: 0%;
+  animation-delay: 5s;
+  background-image: url(../assets/redFireworks.jpg);
+}
+.slide:nth-child(4) {
+  left: 0%;
+  animation-delay: 2s;
+  background-image: url(../assets/CarLights.jpg);
+}
+
+.social {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  border: 0;
+  font-size: 3.5rem;
+  color: #fff44f;
+}
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 35px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 35px;
+}
+
+.projects-btn {
+  display: flex;
   justify-content: center;
   align-content: center;
-  text-align: center;
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-top: .8rem;
+  margin-left: 2rem;
+  font-size: 15px;
+  font-weight: 550;
+  color: #fff44f;
+  background-color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: .3s;
 }
