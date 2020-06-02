@@ -263,10 +263,10 @@ body {
 
 .slide {
   position: absolute;
-  width: 100%;
-  height: inherit;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  animation: slideshow 14s infinite;
+  animation: slideshow 13s infinite;
   background-position: center;
   background-size: cover;
   background-color: #000;
@@ -286,17 +286,17 @@ body {
 .slide:nth-child(2) {
   left: 0%;
   animation-delay: 8s;
-  background-image: url(../assets/JetPlaneClose.jpg);
+  background-image: url(../assets/JetPlaneWide.jpg);
 }
 
 .slide:nth-child(3) {
   left: 0%;
-  animation-delay: 5s;
+  animation-delay: 6s;
   background-image: url(../assets/redFireworks.jpg);
 }
 .slide:nth-child(4) {
   left: 0%;
-  animation-delay: 2s;
+  animation-delay: 4s;
   background-image: url(../assets/CarLights.jpg);
 }
 
@@ -323,7 +323,7 @@ body {
 .projects {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
   align-items: center;
